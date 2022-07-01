@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/img/favcion.png" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Megaone Cinema | Admin Dashboard</title>
+</head>
+
+<body id="body" class="mx-3 my-2">
+  <section class="admin-login none">
+    <h2 style="text-align: center; background-color: transparent; font-size: 35px;">Admin Login</h2>
+    <form class="admin-form">
+      <div class='form-group'>
+        <label for="admin_username" class="label">Email</label><br>
+        <input type="email" id="admin_username" class="admin_email inputfield" placeholder="enter email" required /><br>
+        <label for="admin_password" class="label">Password</label><br>
+        <input type="password" id="admin_password" class="admin_password inputfield" placeholder="enter password"
+          required />
+      </div>
+      <div class='form-group'>
+        <button class='button theme-btn' type='submit' style="margin: 1rem 0;">Submit</button><br>
+        <p><a href="./index.html" style="cursor: pointer; text-decoration: underline; color: #f88835">Go to Homepage</a>
+        </p>
+      </div>
+    </form>
+  </section>
+  <section class="admin-content">
+    <nav class="nav d-flex justify-content-between admin_nav">
+      <div><img src="assets/img/logo.png" alt="bukkahut" width="100px" height="70px" /></div>
+      <div class="d-flex justify-content-between align-items-center">
+        <p class="admin"><a href="#" class="signout" style="padding-right: 1.3rem;">Sign out</a></p>
+        <p class="admin"><a href="#" class="newUser">Add New User</a></p>
+      </div>
+    </nav>
+
+    <form class="newUser-form none">
+      <div class='form-group'>
+        <label for="username" class="label">Email</label><br>
+        <input type="email" id="username" class="email inputfield" placeholder="enter email" required /><br>
+        <label for="password" class="label">Password</label><br>
+        <input type="password" id="password" class="password inputfield" placeholder="enter password" required />
+      </div>
+      <div class='form-group'>
+        <button class='button theme-btn' type='submit' style="margin: 1rem 0;">Add New User</button><br>
+        <p class='form-close' type="button" style="cursor: pointer; text-decoration: underline; color: #f88835">Back</p>
+      </div>
+    </form>
+
+    <div class="recipe-section">
+      <h2 class="py-4">Movie Scheduling and Listing Dashboard</h2>
+      <form class="schedule-form" id='form'>
+        <div class='form-group banner'>
+          <h3 class="py-3">Banner Movies Category</h3>
+          <div class="bannerMovie banner-0">
+            <label class="label" for="recipe-name">Movie Name</label> <br>
+            <input type="text" name='name' placeholder='enter movie name' id='banner-name' class="inputfield"><br>
+            <label class="label" for="recipe-time">Movie Genre</label> <br>
+            <input type="text" name='time' placeholder='enter genre' id='banner-genre' class="inputfield"><br>
+            <label class="label" for="recipe-time">Movie Duration</label> <br>
+            <input type="text" name='time' placeholder='enter duration' id='banner-time' class="inputfield"><br>
+            <label class="label" for="recipeImage">Movie Image</label> <br>
+            <input type="text" name='Image' placeholder='Choose image file 850 x 500' id='bannerImage'
+              class="inputfield"><br>
+            <label class="label" for="recipeVideo">Movie trailer</label> <br>
+            <input type="text" name='video' placeholder='video url' id='bannerVideo' class="inputfield"><br>
+            <label class="label" for="ingredients">Movie Synopsis</label> <br>
+            <textarea type="text" cols="4" name='ingredients' placeholder='enter movie synopsis' id='banner-synopsis'
+              class="inputfield ingredientsList"></textarea><br>
+          </div>
+          <button class="add-banner theme-btn">Add New Movie to Catgory</button>
+        </div>
+        <div class='form-group now-showing'>
+          <h3 class="py-3">Now Showing Category</h3>
+          <div class="nowShowing showing-0">
+            <label class="label" for="recipe-name">Movie Name</label> <br>
+            <input type="text" name='name' placeholder='enter movie name' id='showing-name' class="inputfield"><br>
+            <label class="label" for="recipeImage">Movie Image</label> <br>
+            <input type="text" name='Image' placeholder='Choose image file 850 x 500' id='showingImage'
+              class="inputfield"><br>
+            <label class="label" for="recipeVideo">Movie trailer</label> <br>
+            <textarea type="text" cols="4" name='ingredients' placeholder='enter movie synopsis' id='showing-synopsis'
+              class="inputfield ingredientsList"></textarea><br>
+            <label class="label" for="recipeImage">Cast Images</label> <br>
+            <input name='Image' placeholder='enter cast image url' id='showingCastImage' class="inputfield castInput">
+            <input name='Image' placeholder='enter cast image url' id='showingCastImage2' class="inputfield castInput">
+            <input name='Image' placeholder='enter cast image url' id='showingCastImage3' class="inputfield castInput">
+          </div>
+          <button class="add-showing theme-btn">Add New Movie to Catgory</button>
+        </div>
+        <div class='form-group movies'>
+          <h3 class="py-3">Movie List Category</h3>
+          <div class="movieList movies-0">
+            <label class="label" for="recipe-name">Movie Name</label> <br>
+            <input type="text" name='name' placeholder='enter movie name' id='movie-name' class="inputfield"><br>
+            <label class="label" for="recipe-time">Movie Genre</label> <br>
+            <input type="text" name='genre' placeholder='enter genres' id='movie-genre' class="inputfield"><br>
+            <label class="label" for="recipeImage">Movie Image</label> <br>
+            <input type="text" name='Image' placeholder='Choose image file 850 x 500' id='movieImage'
+              class="inputfield"><br>
+            <label class="label" for="recipeVideo">Movie trailer</label> <br>
+            <input type="text" name='video' placeholder='video url' id='movieVideo' class="inputfield"><br>
+            <label class="label" for="ingredients">Movie Synopsis</label> <br>
+            <textarea type="text" cols="4" name='ingredients' placeholder='enter movie synopsis' id='movie-synopsis'
+              class="inputfield ingredientsList"></textarea><br>
+            <label class="label" for="recipeImage">Movie times</label> <br>
+            <input name='Image' placeholder='enter movie time' id='movieTime1' class="inputfield timeSlot">
+            <input name='Image' placeholder='enter movie time' id='movieTime2' class="inputfield timeSlot">
+            <input name='Image' placeholder='enter movie time' id='movieTime3' class="inputfield timeSlot">
+          </div>
+          <button class="add-movie theme-btn">Add New Movie to Catgory</button>
+        </div>
+        <div class="form-group">
+          <button class='theme-btn button' style="width: 100%" type='submit'>Submit</button>
+        </div>
+      </form>
+
+    </div>
+
+    </div>
+  </section>
+
+  <script>
+
+    function openCity(evt, cityName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+
+  </script>
+  <script type='module'>
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js';
+    // import { getFirestore, collection, getDocs, doc, query, where, setDoc } from 'https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore.js';
+    import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js'
+    import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-database.js";
+    // import { getStorage, ref, uploadBytes, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-storage.js";
+
+    // const APIKEY = '3dcfe8aa07caee3b5cf31f8cb8259765';
+
+    // const firebaseConfig = {
+    //   apiKey: "AIzaSyBzTR9oz8WOj_B4lAEAScsowfjaXs_2IsI",
+    //   authDomain: "megaone-c6490.firebaseapp.com",
+    //   projectId: "megaone-c6490",
+    //   storageBucket: "megaone-c6490.appspot.com",
+    //   messagingSenderId: "346666459656",
+    //   appId: "1:346666459656:web:c7b5697d2e0138061ae7bd"
+    // };
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyATee6ISEhMCyY2Q5VO1vWKoKaZp0jIivM",
+      authDomain: "mega1cms.firebaseapp.com",
+      databaseURL: "https://mega1cms-default-rtdb.firebaseio.com",
+      projectId: "mega1cms",
+      storageBucket: "mega1cms.appspot.com",
+      messagingSenderId: "757048331908",
+      appId: "1:757048331908:web:17977e2f5ee860f2693cd1"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    // const db = getFirestore(app);
+    // const storage = getStorage();
+
+    // Authentication elements
+    const newUser = document.querySelector('.newUser');
+    const formClose = document.querySelector('.form-close');
+    const newUserForm = document.querySelector('.newUser-form')
+    const adminForm = document.querySelector('.admin-form')
+    const section = document.querySelector('.recipe-section');
+    const email = document.querySelector('.email');
+    const password = document.querySelector('.password')
+    const adminEmail = document.querySelector('.admin_email');
+    const adminPassword = document.querySelector('.admin_password')
+    const adminLogin = document.querySelector('.admin-login')
+    const adminContent = document.querySelector('.admin-content')
+    const signout = document.querySelector('.signout');
+
+    // Adding new Recipe elements
+    const addSchedule = document.querySelector('.schedule-form');
+    const recipeInput = document.querySelectorAll('.inputfield')
+    const updateForm = document.querySelector('.update-form');
+    const image = document.getElementById('recipeImage');
+    const imageFile = document.querySelector('input[type="file"]');
+    const video = document.getElementById('recipeVideo');
+    const recipeName = document.getElementById('recipe-name');
+    const allRecipes = document.querySelector('.all-recipes');
+    const update = document.querySelector('.update');
+    const Close = document.querySelector('.close');
+    const updatingForm = document.querySelector('.updating-form');
+    const imageUrl = document.getElementById('image-downloadUrl');
+    const videoUrl = document.getElementById('video-downloadUrl');
+    const recipeIngredients = document.getElementById('ingredients');
+    const recipeInstructions = document.getElementById('instructions');
+    const recipeTime = document.getElementById('recipe-time');
+    const newBannerInput = document.querySelector('.add-banner')
+    const newShowingInput = document.querySelector('.add-showing')
+    const newMovieInput = document.querySelector('.add-movie')
+    const ingredients_container = document.querySelector('.ingredients_container')
+    const instructions_container = document.querySelector('.instructions_container')
+    // const nowShowing = document.querySelectorAll('.nowShowing')
+    // const bannerMovies = document.querySelectorAll('.bannerMovie')
+    // const movieList = document.querySelectorAll('.movieList')
+    const Update = document.getElementById('Update');
+    const bannerFormGroup = document.querySelector('.banner');
+    const showingFormGroup = document.querySelector('.now-showing');
+    const movieFormGroup = document.querySelector('.movies');
+    const castImages = document.querySelector('.add-cast');
+    const castContainer = document.querySelector('.cast-container');
+
+    // Updating Recipe elements
+    const updateRecipeName = document.getElementById('update-recipe-name')
+    const updateRecipeTime = document.getElementById('update-recipe-time')
+    const updateRecipeImage = document.getElementById('update-recipeImage')
+    const updateRecipeVideo = document.getElementById('update-recipeVideo')
+    const ingredientsUpdateList = document.querySelectorAll('.ingredientsUpdateList')
+    const instructionsUpdateList = document.querySelectorAll('.instructionsUpdateList')
+    const updateRecipeImageUrl = document.getElementById('update-image-downloadUrl')
+    const updateRecipeVideoUrl = document.getElementById('update-video-downloadUrl')
+    const updateRecipeInstructions = document.querySelector('.instructions_update_container')
+    const updateRecipeIngredients = document.querySelector('.ingredients_update_container')
+    const updateRecipeIngBtn = document.querySelector('.newIngredientUpdateInput')
+    const updateRecipeInsBtn = document.querySelector('.newInstructionUpdateInput')
+    const updateImageFile = document.querySelector('.imagefile');
+    const updateVideo = document.getElementById('update-recipeVideo');
+    const goBack = document.getElementById('goback');
+
+    //Check if there is a loggedIn admin
+    window.addEventListener('load', () => {
+      if (sessionStorage.getItem('admin') === null || sessionStorage.getItem('admin') === undefined) {
+        console.log('seen')
+        adminLogin.style.display = 'block';
+        adminContent.style.display = 'none'
+      } else {
+        adminLogin.style.display = 'none';
+        adminContent.style.display = 'block';
+      }
+    })
+
+    //admin firebase sign in with email and password. NB: password has to be >= 6 characters
+    adminForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const emailValue = adminEmail.value;
+      const passwordValue = adminPassword.value;
+      console.log(emailValue, passwordValue)
+
+      //sign up
+      const auth = getAuth();
+      signInWithEmailAndPassword(auth, emailValue, passwordValue)
+        .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          console.log(emailValue);
+          sessionStorage.setItem('admin', emailValue)
+          alert('Admin login successful!')
+          location.reload()
+          // authArea.innerText = `${sessionStorage.getItem('email')}`
+          // authArea.style.paddingLeft = '10px';
+          // authArea.style.color = '#f88835';
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+        });
+    })
+
+    // Admin sign out
+    signout.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      sessionStorage.removeItem('admin');
+      location.reload()
+    })
+
+    // Show the add new user form
+    newUser.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      newUserForm.style.display = 'block'
+      section.style.display = 'none';
+    })
+
+    // Firebase function for creating new users from the add new user form
+    newUserForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const emailValue = email.value;
+      const passwordValue = password.value;
+      console.log(emailValue, passwordValue)
+
+      //sign up
+      const auth = getAuth();
+      createUserWithEmailAndPassword(auth, emailValue, passwordValue)
+        .then((userCredential) => {
+          // Signed in 
+          // console.log(emailValue)
+          const user = userCredential.user;
+          // $('.signup-area').hide();
+          // sessionStorage.setItem('email', emailValue)
+          alert('New User Created!')
+          location.reload()
+          // authArea.innerText = `${emailValue}`
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // ..
+        });
+    })
+
+    // Close the add new user form and show the admin home
+    formClose.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      newUserForm.style.display = 'none'
+      section.style.display = 'block';
+    })
+
+    // Function for uploading images and setting the image url
+    // image.addEventListener('change', () => {
+    //   const name = recipeName.value;
+    //   const str = image.value;
+
+    //   const formData = new FormData();
+
+    //   formData.append('image', imageFile.files[0]);
+
+    //   fetch(`https://api.imgbb.com/1/upload?key=${APIKEY}`, {
+    //     method: 'POST',
+    //     body: formData
+    //   })
+    //     .then((response) => response.json())
+    //     .then((result) => {
+    //       console.log('Success:', result);
+    //       imageUrl.value = result.data.url
+    //       console.log(imageUrl.value);
+    //     })
+    //     .catch((error) => {
+    //       console.error('Error:', error);
+    //     });
+    // })
+
+    // Function for uploading videos and setting the video url
+    const url = "https://api.cloudinary.com/v1_1/vc3/video/upload";
+
+    // video.addEventListener("change", (e) => {
+    //   e.preventDefault();
+
+    //   const videoFile = document.getElementById('recipeVideo');
+    //   const formData = new FormData();
+
+    //   let file = videoFile.files[0];
+    //   formData.append("file", file);
+    //   formData.append("upload_preset", "yiml1of9");
+
+    //   fetch(url, {
+    //     method: "POST",
+    //     body: formData
+    //   })
+    //     .then((response) => {
+    //       return response.json();
+    //     })
+    //     .then((data) => {
+    //       console.log(data);
+    //       videoUrl.value = data.url
+    //       console.log(videoUrl.value)
+    //       // document.getElementById("data").innerHTML += data;
+    //     });
+
+    // });
+
+    //adding new cast image
+    // castImages.addEventListener('click', (e) => {
+    //   e.preventDefault();
+    //   let newInput = document.createElement('input');
+    //   newInput.setAttribute('type', 'text');
+    //   newInput.classList.add('inputfield');
+    //   newInput.placeholder = 'enter cast image url'
+    //   castContainer.insertBefore(newInput, castImages);
+
+    //   const castNumber = document.querySelectorAll('.cast-container > .inputfield')
+    //   console.log(castNumber);
+    //   if (castNumber.length >= 3) {
+    //     castImages.disabled = true;
+    //     alert('maximum reached')
+    //   }
+    // })
+    let movienum = 1;
+    newMovieInput.addEventListener('click', (e) => {
+      e.preventDefault();
+      let currentNum = movienum++;
+      console.log(currentNum);
+      let movieList1 = document.createElement('div')
+      let newMovieName = document.createElement('input');
+      let newMovieLabel = document.createElement('label');
+      let newGenreLabel = document.createElement('label');
+      let newMovieGenre = document.createElement('input');
+      let newMovieImageUrl = document.createElement('input');
+      let newImageUrlLabel = document.createElement('label');
+      let newMovieVideoUrl = document.createElement('input');
+      let newVideoUrlLabel = document.createElement('label');
+      let newMovieSynopsis = document.createElement('textarea');
+      let newSynopsisLabel = document.createElement('label');
+      let newCastImageLabel = document.createElement('label');
+      let newCastImageUrl1 = document.createElement('input');
+      let newCastImageUrl2 = document.createElement('input');
+      let newCastImageUrl3 = document.createElement('input');
+
+      movieList1.classList.add(`movies-${currentNum}`)
+      movieList1.classList.add(`movieList`)
+      //inputs
+      newMovieName.setAttribute('type', 'text')
+      newMovieName.classList.add('inputfield');
+      newMovieName.placeholder = 'enter movie name'
+      newMovieGenre.setAttribute('type', 'text')
+      newMovieGenre.classList.add('inputfield');
+      newMovieGenre.placeholder = 'enter movie genre'
+      newMovieImageUrl.setAttribute('type', 'text')
+      newMovieImageUrl.classList.add('inputfield');
+      newMovieVideoUrl.setAttribute('type', 'text')
+      newMovieVideoUrl.classList.add('inputfield');
+      newMovieVideoUrl.placeholder = 'enter video url'
+      newMovieImageUrl.placeholder = 'enter image url'
+      newMovieSynopsis.setAttribute('type', 'text')
+      newMovieSynopsis.classList.add('inputfield');
+      newMovieSynopsis.placeholder = 'enter movie synopsis'
+      newCastImageUrl1.classList.add('inputfield');
+      newCastImageUrl1.classList.add('castInput');
+      newCastImageUrl1.placeholder = 'enter movie time'
+      newCastImageUrl2.classList.add('inputfield');
+      newCastImageUrl2.classList.add('castInput');
+      newCastImageUrl2.placeholder = 'enter movie time'
+      newCastImageUrl3.classList.add('inputfield');
+      newCastImageUrl3.classList.add('castInput');
+      newCastImageUrl3.placeholder = 'enter movie time'
+      //labels
+      newMovieLabel.classList.add('label')
+      newMovieLabel.textContent = 'Movie Name'
+      newGenreLabel.classList.add('label')
+      newGenreLabel.textContent = 'Movie genre'
+      newImageUrlLabel.classList.add('label')
+      newImageUrlLabel.textContent = 'Movie Image'
+      newVideoUrlLabel.classList.add('label')
+      newVideoUrlLabel.textContent = 'Movie Image'
+      newSynopsisLabel.classList.add('label')
+      newSynopsisLabel.textContent = 'Movie Synopsis'
+      newCastImageLabel.classList.add('label');
+      newCastImageLabel.style.display = 'block'
+      newCastImageLabel.textContent = 'Time Slots'
+      //insert
+      movieFormGroup.insertBefore(movieList1, newMovieInput)
+
+      movieList1.append(newMovieLabel)
+      movieList1.append(newMovieName)
+      movieList1.append(newGenreLabel)
+      movieList1.append(newMovieGenre)
+      movieList1.append(newImageUrlLabel)
+      movieList1.append(newMovieImageUrl)
+      movieList1.append(newVideoUrlLabel)
+      movieList1.append(newMovieVideoUrl)
+      movieList1.append(newSynopsisLabel)
+      movieList1.append(newMovieSynopsis)
+      movieList1.append(newCastImageLabel)
+      movieList1.append(newCastImageUrl1)
+      movieList1.append(newCastImageUrl2)
+      movieList1.append(newCastImageUrl3);
+      return movienum;
+    })
+
+    // creating new add showing movie input fields 
+    let showingNum = 1;
+    newShowingInput.addEventListener('click', (e) => {
+      e.preventDefault();
+      let currentNum = showingNum++;
+      console.log(currentNum);
+      let showing1 = document.createElement('div')
+      let newMovieName = document.createElement('input');
+      let newMovieLabel = document.createElement('label');
+      let newMovieImageUrl = document.createElement('input');
+      let newImageUrlLabel = document.createElement('label');
+      let newMovieSynopsis = document.createElement('textarea');
+      let newSynopsisLabel = document.createElement('label');
+      let newCastImageLabel = document.createElement('label');
+      let newCastImageUrl1 = document.createElement('input');
+      let newCastImageUrl2 = document.createElement('input');
+      let newCastImageUrl3 = document.createElement('input');
+
+      showing1.classList.add(`showing-${currentNum}`)
+      showing1.classList.add(`nowShowing`)
+      //inputs
+      newMovieName.setAttribute('type', 'text')
+      newMovieName.classList.add('inputfield');
+      newMovieName.placeholder = 'enter movie name'
+      newMovieImageUrl.setAttribute('type', 'text')
+      newMovieImageUrl.classList.add('inputfield');
+      newMovieImageUrl.placeholder = 'enter image url'
+      newMovieSynopsis.setAttribute('type', 'text')
+      newMovieSynopsis.classList.add('inputfield');
+      newMovieSynopsis.placeholder = 'enter movie synopsis'
+      newCastImageUrl1.classList.add('inputfield');
+      newCastImageUrl1.classList.add('castInput');
+      newCastImageUrl1.placeholder = 'enter movie time'
+      newCastImageUrl2.classList.add('inputfield');
+      newCastImageUrl2.classList.add('castInput');
+      newCastImageUrl2.placeholder = 'enter movie time'
+      newCastImageUrl3.classList.add('inputfield');
+      newCastImageUrl3.classList.add('castInput');
+      newCastImageUrl3.placeholder = 'enter movie time'
+      //labels
+      newMovieLabel.classList.add('label')
+      newMovieLabel.textContent = 'Movie Name'
+      newImageUrlLabel.classList.add('label')
+      newImageUrlLabel.textContent = 'Movie Image'
+      newSynopsisLabel.classList.add('label')
+      newSynopsisLabel.textContent = 'Movie Synopsis'
+      newCastImageLabel.classList.add('label');
+      newCastImageLabel.style.display = 'block'
+      newCastImageLabel.textContent = 'Cast Image'
+      //insert
+
+      showingFormGroup.insertBefore(showing1, newShowingInput)
+
+      showing1.append(newMovieLabel)
+      showing1.append(newMovieName)
+      showing1.append(newImageUrlLabel)
+      showing1.append(newMovieImageUrl)
+      showing1.append(newSynopsisLabel)
+      showing1.append(newMovieSynopsis)
+      showing1.append(newCastImageLabel)
+      showing1.append(newCastImageUrl1)
+      showing1.append(newCastImageUrl2)
+      showing1.append(newCastImageUrl3)
+    })
+
+    let bannerNum = 1;
+    // creating new add banner movie input fields 
+    newBannerInput.addEventListener('click', (e) => {
+      e.preventDefault();
+      console.log('clicked');
+      let currentNum = bannerNum++;
+      console.log(currentNum);
+      let banner1 = document.createElement('div');
+      let newMovieName = document.createElement('input');
+      let newMovieLabel = document.createElement('label');
+      let newGenreLabel = document.createElement('label');
+      let newMovieGenre = document.createElement('input');
+      let newMovieDuration = document.createElement('input');
+      let newDurationLabel = document.createElement('label');
+      let newMovieImageUrl = document.createElement('input');
+      let newImageUrlLabel = document.createElement('label');
+      let newMovieVideoUrl = document.createElement('input');
+      let newVideoUrlLabel = document.createElement('label');
+      let newMovieSynopsis = document.createElement('textarea');
+      let newSynopsisLabel = document.createElement('label');
+
+      banner1.classList.add('bannerMovie');
+      banner1.classList.add(`banner-${currentNum}`);
+      //inputs
+      newMovieName.setAttribute('type', 'text')
+      newMovieDuration.setAttribute('type', 'text')
+      newMovieName.classList.add('inputfield');
+      newMovieName.placeholder = 'enter movie name'
+      newMovieGenre.setAttribute('type', 'text')
+      newMovieGenre.classList.add('inputfield');
+      newMovieGenre.placeholder = 'enter movie genre'
+      newMovieDuration.classList.add('inputfield');
+      newMovieDuration.placeholder = 'enter movie duration'
+      newMovieImageUrl.setAttribute('type', 'text')
+      newMovieImageUrl.classList.add('inputfield');
+      newMovieImageUrl.placeholder = 'enter image url'
+      newMovieVideoUrl.setAttribute('type', 'text')
+      newMovieVideoUrl.classList.add('inputfield');
+      newMovieVideoUrl.placeholder = 'enter video url'
+      newMovieSynopsis.setAttribute('type', 'text')
+      newMovieSynopsis.classList.add('inputfield');
+      newMovieSynopsis.placeholder = 'enter movie synopsis'
+      //labels
+      newMovieLabel.classList.add('label')
+      newDurationLabel.classList.add('label')
+      newMovieLabel.textContent = 'Movie Name'
+      newDurationLabel.textContent = 'Movie Duration'
+      newGenreLabel.classList.add('label')
+      newGenreLabel.textContent = 'Movie genre'
+      newImageUrlLabel.classList.add('label')
+      newImageUrlLabel.textContent = 'Movie Image'
+      newVideoUrlLabel.classList.add('label')
+      newVideoUrlLabel.textContent = 'Movie Image'
+      newSynopsisLabel.classList.add('label')
+      newSynopsisLabel.textContent = 'Movie Synopsis'
+      //insert
+
+      bannerFormGroup.insertBefore(banner1, newBannerInput);
+
+      banner1.append(newMovieLabel)
+      banner1.append(newMovieName)
+      banner1.append(newGenreLabel)
+      banner1.append(newMovieGenre)
+      banner1.append(newDurationLabel)
+      banner1.append(newMovieDuration)
+      banner1.append(newImageUrlLabel)
+      banner1.append(newMovieImageUrl)
+      banner1.append(newVideoUrlLabel)
+      banner1.append(newMovieVideoUrl)
+      banner1.append(newSynopsisLabel)
+      banner1.append(newMovieSynopsis)
+    })
+
+
+    // const scheduleRef = collection(db, 'Scheduling')
+
+    //   console.log(scheduleRef);
+    //   // const q = query(scheduleRef, where('Name', '==', value))
+
+    //   const querySnapshot = await getDocs(scheduleRef);
+    //   console.log(querySnapshot)
+    //   querySnapshot.forEach((doc) => {
+    //     const recipeObj = doc.data();
+    //     console.log(recipeObj)
+    //     localStorage.setItem('recipeUpdate', JSON.stringify(recipeObj))
+    //     // name.innerHTML = recipeObj.Name
+    //   })
+    // console.log(bannerMovies)
+
+    const getNumberOfSectionBlocks = (section) => {
+      return section.length
+    }
+
+    const bannerInputValues = (el) => {
+      console.log('getting values...');
+      let numberOfSections = getNumberOfSectionBlocks(el);
+      console.log(numberOfSections);
+      let bannerArr = [];
+      if (numberOfSections === 1) {
+        const banner = document.querySelectorAll('.banner-0 > .inputfield');
+        let bannerObj = {
+          name: '',
+          genre: '',
+          duration: '',
+          imgUrl: '',
+          vidUrl: '',
+          synopsis: ''
+        };
+        for (let i = 0; i < banner.length; i++) {
+          bannerObj.name = banner[0].value;
+          bannerObj.genre = banner[1].value
+          bannerObj.duration = banner[2].value
+          bannerObj.imgUrl = banner[3].value
+          bannerObj.vidUrl = banner[4].value
+          bannerObj.synopsis = banner[5].value
+          // bannerArr.push(bannerObj);
+        }
+        console.log(bannerObj);
+        bannerArr.push(bannerObj);
+        console.log(bannerArr)
+        return bannerArr;
+      } else {
+        for (let i = 0; i < numberOfSections; i++) {
+          const banner = document.querySelectorAll(`.banner-${i} > .inputfield`);
+          let bannerObj = {
+            name: '',
+            genre: '',
+            duration: '',
+            imgUrl: '',
+            vidUrl: '',
+            synopsis: ''
+          }
+          for (let j = 0; j < banner.length; j++) {
+            bannerObj.name = banner[0].value;
+            bannerObj.genre = banner[1].value
+            bannerObj.duration = banner[2].value
+            bannerObj.imgUrl = banner[3].value
+            bannerObj.vidUrl = banner[4].value
+            bannerObj.synopsis = banner[5].value
+          }
+          bannerArr.push(bannerObj);
+          console.log(bannerArr)
+        }
+        // return bannerArr;
+      }
+      return bannerArr;
+    }
+
+    const showingInputValues = (el) => {
+      console.log('getting values...');
+      let numberOfSections = getNumberOfSectionBlocks(el);
+      console.log(numberOfSections);
+      console.log(numberOfSections);
+      let showingArr = [];
+      if (numberOfSections === 1) {
+        const showing = document.querySelectorAll('.showing-0 > .inputfield');
+        let showingObj = {
+          name: '',
+          imgUrl: '',
+          synopsis: '',
+          castImgUrl: []
+        };
+        for (let i = 0; i < showing.length; i++) {
+          showingObj.name = showing[0].value;
+          showingObj.imgUrl = showing[1].value
+          showingObj.synopsis = showing[2].value
+          showingObj.castImgUrl = [showing[3].value, showing[4].value, showing[5].value]
+          // showingArr.push(showingObj);
+        }
+        console.log(showingObj);
+        showingArr.push(showingObj);
+        console.log(showingArr)
+        return showingArr;
+      } else {
+        for (let i = 0; i < numberOfSections; i++) {
+          const showing = document.querySelectorAll(`.showing-${i} > .inputfield`);
+          let showingObj = {
+            name: '',
+            imgUrl: '',
+            synopsis: '',
+            castImgUrl: []
+          }
+          for (let j = 0; j < showing.length; j++) {
+            showingObj.name = showing[0].value;
+            showingObj.imgUrl = showing[1].value
+            showingObj.synopsis = showing[2].value
+            showingObj.castImgUrl = [showing[3].value, showing[4].value, showing[5].value]
+          }
+          showingArr.push(showingObj);
+          console.log(showingArr)
+        }
+        // // return bannerArr;
+      }
+      return showingArr;
+    }
+
+    const movieInputValues = (el) => {
+      console.log('getting values...');
+      let numberOfSections = getNumberOfSectionBlocks(el);
+      console.log(numberOfSections);
+      console.log(numberOfSections);
+      let moviesArr = [];
+      if (numberOfSections === 1) {
+        const movies = document.querySelectorAll('.movies-0 > .inputfield');
+        let moviesObj = {
+          name: '',
+          genre: '',
+          imgUrl: '',
+          vidUrl: '',
+          synopsis: '',
+          timeSlots: []
+        };
+        for (let i = 0; i < movies.length; i++) {
+          moviesObj.name = movies[0].value;
+          moviesObj.genre = movies[1].value
+          moviesObj.imgUrl = movies[2].value
+          moviesObj.vidUrl = movies[3].value
+          moviesObj.synopsis = movies[4].value
+          moviesObj.timeSlots = [movies[5].value, movies[6].value, movies[7].value]
+          // bannerArr.push(moviesObj);
+        }
+        console.log(moviesObj);
+        moviesArr.push(moviesObj);
+        console.log(moviesArr)
+        return moviesArr;
+      } else {
+        for (let i = 0; i < numberOfSections; i++) {
+          const movies = document.querySelectorAll(`.movies-${i} > .inputfield`);
+          let moviesObj = {
+            name: '',
+            genre: '',
+            imgUrl: '',
+            vidUrl: '',
+            synopsis: '',
+            timeSlots: []
+          }
+          for (let j = 0; j < movies.length; j++) {
+            moviesObj.name = movies[0].value;
+            moviesObj.genre = movies[1].value
+            moviesObj.imgUrl = movies[2].value
+            moviesObj.vidUrl = movies[3].value
+            moviesObj.synopsis = movies[4].value
+            moviesObj.timeSlots = [movies[5].value, movies[6].value, movies[7].value]
+          }
+          moviesArr.push(moviesObj);
+          console.log(moviesArr)
+        }
+        // return bannerArr;
+      }
+      return moviesArr;
+    }
+
+    // Firebase function for adding a new recipe document to the Recipe collection
+    addSchedule.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const nowShowing = document.querySelectorAll('.nowShowing')
+      const movieList = document.querySelectorAll('.movieList')
+      const bannerMovies = document.querySelectorAll('.bannerMovie')
+      const showing = showingInputValues(nowShowing);
+      const movies = movieInputValues(movieList);
+      const banners = bannerInputValues(bannerMovies);
+
+      // console.log(banners, showing, movies)
+      // console.log(banners);
+      // console.log(showing)
+      // console.log(movies);
+      // console.log(movies.name)
+      // console.log(database);
+      // set(ref(database, "movies/" + movies.uid), movies);
+      set(ref(database, "movies/" + Date.now()), movies);
+      set(ref(database, "showing/" + Date.now()), showing);
+      set(ref(database, "banners/" + Date.now()), banners);
+      alert('Movie Schedule Updated')
+      // const scheduleRef = collection(db, 'Scheduling'); ///get the scheduling collection
+      // const snaps = await getDocs(scheduleRef); //get the documents in the collection
+      // console.log(snaps);
+
+      // if (!snaps.exists) {
+      //   // const { bookingEmail, bookingName, total } = user;
+      //   const createdAt = new Date();
+
+      //   try {
+      //     console.log('saving...')
+      //     await setDoc(doc(db, 'Scheduling', `Schedule`), {
+      //       Banner: banners,
+      //       Showing: showing,
+      //       Movies: movies,
+      //     });
+      //     alert('Movie Schedule Updated')
+      //   } catch (error) {
+      //     console.log("Error Creating User", error.message);
+      //   }
+      // } else {
+      //   // btn.innerHTML = `Already Subscribed!`
+      //   addRecipe.reset();
+      // }
+
+    })
+
+    // Search form to get the recipe to be updated
+    // updateForm.addEventListener('submit', async (e) => {
+    //   e.preventDefault();
+
+    //   // location.reload();
+    //   let recipeIng, recipeIns, Ingnodes, Insnodes;
+
+    //   const value = update.value;
+    //   localStorage.removeItem('recipeUpdate')
+    //   updateRecipeName.value = '';
+    //   updateRecipeTime.value = '';
+
+    //   // let recipeIng = recipeSearch.Ingredients;
+    //   // let recipeIns = recipeSearch.Instructions;
+
+    //   allRecipes.innerHTML = '<p>...Loading</p>'
+
+    //   const recipesRef = collection(db, 'Recipes')
+
+    //   // console.log(recipesRef);
+    //   const q = query(recipesRef, where('Name', '==', value))
+
+    //   const querySnapshot = await getDocs(q);
+    //   querySnapshot.forEach((doc) => {
+    //     const recipeObj = doc.data();
+    //     // console.log(recipeObj)
+    //     localStorage.setItem('recipeUpdate', JSON.stringify(recipeObj))
+    //     // name.innerHTML = recipeObj.Name
+    //   });
+
+    //   const recipeSearch = JSON.parse(localStorage.getItem('recipeUpdate'))
+    //   // console.log(recipeSearch);
+
+    //   allRecipes.innerHTML = `${recipeSearch.Name} Recipe`
+    //   allRecipes.classList.add('card')
+    //   Close.style.display = 'flex';
+
+    //   // Getting the vsalues of the returned recipe from the search function and appending them in the respective input fields
+    //   updateRecipeName.value = recipeSearch.Name;
+    //   updateRecipeTime.value = recipeSearch.CookingTime;
+    //   recipeIng = recipeSearch.Ingredients;
+    //   recipeIns = recipeSearch.Instructions;
+
+    //   console.log(recipeIng)
+
+    //   Ingnodes = recipeIng.map(ing => {
+    //     let newInput = document.createElement('input');
+    //     newInput.classList.add('inputfield');
+    //     newInput.classList.add('ingredientsUpdateList');
+    //     newInput.value = ing;
+    //     // console.log(newInput.value)
+    //     return newInput;
+    //   });
+
+    //   Insnodes = recipeIns.map(ins => {
+    //     let newInput = document.createElement('input');
+    //     newInput.classList.add('inputfield');
+    //     newInput.classList.add('instructionsUpdateList');
+    //     newInput.value = ins;
+    //     // console.log(newInput.value)
+    //     return newInput;
+    //   });
+
+    //   console.log(Ingnodes)
+    //   updateRecipeIngredients.append(...Ingnodes);
+    //   updateRecipeInstructions.append(...Insnodes);
+    // })
+
+    // updateRecipeIngredients.remove();
+    //   updateRecipeInstructions.remove()
+    // const recipeSearch = JSON.parse(localStorage.getItem('recipeUpdate'))
+
+    // Close the search result block if not needed
+    // Close.addEventListener('click', () => {
+    //   console.log(allRecipes)
+    //   allRecipes.innerHTML = '';
+    //   allRecipes.classList.remove('card')
+    //   Close.style.display = 'none';
+    // })
+
+    // // Show the form for updating the returned recipe from the search form function
+    // allRecipes.addEventListener('click', () => {
+    //   console.log('clicked');
+
+    //   updatingForm.style.display = 'block';
+    //   update.style.display = 'none';
+    //   allRecipes.innerHTML = '';
+    //   allRecipes.classList.remove('card')
+    //   Close.style.display = 'none';
+    // })
+
+    // Uploading the updated image and setting the value
+    // updateRecipeImage.addEventListener('change', () => {
+    //   const name = recipeName.value;
+    //   const str = image.value;
+
+    //   const updateBtn = document.querySelector('.update-btn');
+    //   console.log(updateImageFile)
+
+    //   const formData = new FormData();
+
+    //   formData.append('image', updateImageFile.files[0]);
+    //   alert('...uploading image')
+    //   updateBtn.style.cursor = 'not-allowed'
+
+    //   fetch(`https://api.imgbb.com/1/upload?key=${APIKEY}`, {
+    //     method: 'POST',
+    //     body: formData
+    //   })
+    //     .then((response) => response.json())
+    //     .then((result) => {
+    //       console.log('Success:', result);
+    //       updateRecipeImageUrl.value = result.data.url
+    //       updateBtn.style.cursor = 'pointer'
+    //       console.log(updateRecipeImageUrl.value);
+    //     })
+    //     .catch((error) => {
+    //       alert('An error occurred, check network connection and try again')
+    //       console.error('Error:', error);
+    //     });
+    // })
+
+    // //uploading the updated video and setting the value
+
+
+    // updateVideo.addEventListener("change", (e) => {
+    //   e.preventDefault();
+    //   const url = "https://api.cloudinary.com/v1_1/vc3/video/upload";
+
+    //   const updateVideoFile = document.getElementById('update-recipeVideo');
+
+    //   const updateBtn = document.querySelector('.update-btn');
+
+    //   const formData = new FormData();
+
+    //   let file = updateVideoFile.files[0];
+    //   formData.append("file", file);
+    //   formData.append("upload_preset", "yiml1of9");
+    //   alert('...uploading video')
+    //   updateBtn.style.cursor = 'not-allowed'
+
+    //   fetch(url, {
+    //     method: "POST",
+    //     body: formData
+    //   })
+    //     .then((response) => {
+    //       return response.json();
+    //     })
+    //     .then((data) => {
+    //       console.log(data.signature);
+    //       console.log(data);
+    //       updateRecipeVideoUrl.value = data.url
+    //       alert('upload complete')
+    //       updateBtn.style.cursor = 'pointer'
+    //       console.log(updateRecipeVideoUrl.value)
+    //       // document.getElementById("data").innerHTML += data;
+    //     })
+    //     .catch((error) => {
+    //       alert('An error occurred, check network connection and try again')
+    //     })
+
+    // });
+
+
+    // // Firebase function for updating the recipe with the required informations
+    // updatingForm.addEventListener('submit', async (e) => {
+    //   e.preventDefault();
+    //   // console.log(updateRecipeImageUrl.value, updateRecipeVideoUrl.value)
+    //   // const updateBtn = document.querySelector('.update-btn');
+    //   // if (updateRecipeImageUrl.value === '' || updateRecipeVideoUrl.value === '') updateBtn.style.cursor = 'not-allowed'
+
+    //   const ingredientsList = document.querySelectorAll('.ingredientsUpdateList')
+    //   const instructionsList = document.querySelectorAll('.instructionsUpdateList')
+    //   const Name = updateRecipeName.value
+    //   const imgUrl = updateRecipeImageUrl.value;
+    //   const vidUrl = updateRecipeVideoUrl.value
+    //   // const Instruction = recipeInstructions.value;
+    //   // const Ingredients = recipeIngredients.value;
+    //   const CookingTime = updateRecipeTime.value
+    //   const ing = []
+    //   console.log(ingredientsList);
+    //   ingredientsList.forEach(inglst => {
+    //     inglst.value !== '' ? ing.push(inglst.value) : ing
+    //     return ing;
+    //   });
+
+    //   const ins = []
+    //   console.log(instructionsList);
+    //   instructionsList.forEach(inslst => {
+    //     inslst.value !== '' ? ins.push(inslst.value) : ins
+    //     return ins;
+    //   });
+
+    //   // console.log(ing, ins)
+
+    //   let allInstructions = ins;
+    //   let allIngredients = ing;
+
+    //   console.log(allInstructions, allIngredients)
+
+    //   const recipesRef = collection(db, `Recipes`); ///get the recipe collection
+    //   const snaps = await getDocs(recipesRef); //get the documents in the collection
+    //   console.log(snaps);
+
+    //   console.log(allIngredients, allInstructions)
+
+    //   if (!snaps.exists) {
+    //     // const { bookingEmail, bookingName, total } = user;
+    //     const createdAt = new Date();
+
+
+    //     try {
+    //       console.log('saving...')
+    //       await setDoc(doc(db, 'Recipes', `${Name}`), {
+    //         Name,
+    //         imgUrl,
+    //         vidUrl,
+    //         Instructions: allInstructions,
+    //         Ingredients: allIngredients,
+    //         CookingTime
+    //       });
+    //       alert('Recipe Updated')
+    //       updatingForm.reset();
+    //       updatingForm.style.display = 'none';
+    //       update.style.display = 'block';
+    //     } catch (error) {
+    //       console.log("Error Creating User", error.message);
+    //     }
+    //   }
+    // })
+    // goBack.addEventListener('click', () => {
+    //   console.log('call');
+    //   location.reload();
+
+    //   updatingForm.style.display = 'none';
+    //   update.style.display = 'block';
+    //   Update.style.display = 'block';
+
+    // })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+User-agent: *
+sitemap: https://trosmarketing.com/index.php?fdownload=sitemap&opt=show

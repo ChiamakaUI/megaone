@@ -1,0 +1,657 @@
+<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Megaone Cinema </title>
+	<!-- Favicon Icon -->
+	<link rel="icon" type="image/png" href="assets/img/favcion.png" />
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
+	<!-- Slick nav CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/slicknav.min.css" media="all" />
+	<!-- Iconfont CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/icofont.css" media="all" />
+	<!-- Owl carousel CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+	<!-- Popup CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+	<!-- Main style CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
+	<!-- Responsive CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="all" />
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+	<!-- Page loader -->
+	<div id="preloader"></div>
+	<!-- header section start -->
+	<header class="header">
+		<div class="container">
+			<div class="header-area">
+				<div class="logo">
+					<a href="index.html"><img src="assets/img/logo.png" alt="logo" /></a>
+				</div>
+				<div class="header-right">
+					<form action="#">
+						<input type="text" placeholder="search movies" />
+						<button><i class="icofont icofont-search"></i></button>
+					</form>
+					<p class="user"></p>
+					<ul class='auth-area'>
+						<li><a class="signup-popup" href="#">Sign up</a></li>
+						<li><a class="login-popup" href="#">Login</a></li>
+					</ul>
+				</div>
+				<div class="menu-area">
+					<div class="responsive-menu"></div>
+					<div class="mainmenu">
+						<ul id="primary-menu">
+							<li><a href="index.html">Home</a></li>
+							<li><a class="active" href="movies.html">Movies</a></li>
+							<!-- <li><a href="celebrities.html">Spotlight</a></li> -->
+							<li><a href="tickets.html">Tickets</a></li>
+							<li><a href="about.html">About Us</a></li>
+							<!-- <li><a href="top-movies.html">Top Movies</a></li>
+                                <li><a href="blog.html">News</a></li>
+								<li><a href="#">Pages <i class="icofont icofont-simple-down"></i></a>
+									<ul>
+										<li><a href="blog-details.html">Blog Details</a></li>
+										<li><a href="movie-details.html">Movie Details</a></li>
+									</ul>
+								</li> -->
+							<li><a class="theme-btn" href="booking.html"><i class="icofont icofont-ticket"></i> Book
+									Hall</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="login-area">
+		<div class="login-box">
+			<a href="#"><i class="icofont icofont-close"></i></a>
+			<h2>LOGIN</h2>
+			<form class="login-form">
+				<h6>EMAIL ADDRESS</h6>
+				<input class="emails" type="email" />
+				<h6>PASSWORD</h6>
+				<input class="passwords" type="password" />
+				<!-- <div class="login-remember">
+								<input value="lsRememberMe" id="rememberMe" type="checkbox" />
+								<label for="rememberMe">Remember Me</label>
+							</div> -->
+				<div class="login-signup">
+					<span>SIGNUP</span>
+				</div>
+				<button type='submit' class="theme-btn">LOG IN</button>
+				<span>Or Via Social</span>
+				<div class="login-social">
+					<a href="#"><i class="icofont icofont-social-facebook"></i></a>
+					<a href="#"><i class="icofont icofont-social-twitter"></i></a>
+					<a href="#"><i class="icofont icofont-social-linkedin"></i></a>
+					<a href="#"><i class="icofont icofont-social-google-plus"></i></a>
+					<a href="#"><i class="icofont icofont-camera"></i></a>
+				</div>
+			</form>
+
+		</div>
+	</div>
+	<div class="signup-area">
+		<div class="login-box">
+			<a href="#"><i class="icofont icofont-close"></i></a>
+			<h2>SIGN UP</h2>
+			<form class="form">
+				<h6>EMAIL ADDRESS</h6>
+				<input class="email" type="email" placeholder="enter email" />
+				<h6>PASSWORD</h6>
+				<input class="password" type="password" placeholder="enter password" />
+				<div class="signup-login">
+					<span>LOGIN</span>
+				</div>
+				<button type="submit" class="theme-btn">SIGN UP</button>
+				<span>Or Via Social</span>
+				<div class="login-social">
+					<a href="#"><i class="icofont icofont-social-facebook"></i></a>
+					<a href="#"><i class="icofont icofont-social-twitter"></i></a>
+					<a href="#"><i class="icofont icofont-social-linkedin"></i></a>
+					<a href="#"><i class="icofont icofont-social-google-plus"></i></a>
+					<a href="#"><i class="icofont icofont-camera"></i></a>
+				</div>
+			</form>
+
+		</div>
+	</div>
+	<div class="buy-ticket">
+		<div class="container">
+			<div class="buy-ticket-area">
+				<a href="#"><i class="icofont icofont-close"></i></a>
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="buy-ticket-box">
+							<h4>Buy Tickets</h4>
+							<form class="buy-form">
+								<h5>Who is going?</h5>
+								<div class="ticket-input">
+									<label>Adult(s)</label>
+									<input class="adult-number" min="0" type="number" placeholder="e.g 2" required />
+								</div>
+								<div class="ticket-input">
+									<label>Child(ren)</label>
+									<input class="child-number" min="0" type="number"
+										placeholder="Please enter 0 if none" required />
+								</div>
+								<div class="customer">
+									<p>Customer Information</p>
+									<div>
+										<input class="booking-email" type="email" placeholder="Your email" required />
+										<input class="booking-name" type='text' placeholder="Your name" required />
+									</div>
+								</div>
+								<button type="submit" class="theme-btn" style="margin-top: 20px;">Proceed</button>
+							</form>
+						</div>
+					</div>
+					<div class="col-lg-3 offset-lg-1">
+						<div class="buy-ticket-box mtr-30">
+							<h4>Your Information</h4>
+							<ul>
+								<li>
+									<p>Location</p>
+									<span>MegaOne Cinema</span>
+								</li>
+								<li>
+									<p class="time">TIME</p>
+									<span>2018.07.09 20:40</span>
+								</li>
+								<li>
+									<p class="movie-name">Movie name</p>
+									<span>Home Alone</span>
+								</li>
+								<li>
+									<p class="ticket-info">Ticket number</p>
+									<span class="adult"></span>
+									<span class="children"></span>
+								</li>
+								<li>
+									<p class="ticket-price">Total Price</p>
+									<span></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- header section end -->
+	<!-- breadcrumb area start -->
+	<section class="breadcrumb-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="breadcrumb-area-content">
+						<h1>Movies Page</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- breadcrumb area end -->
+	<!-- portfolio section start -->
+	<section class="portfolio-area pt-60">
+		<div class="container">
+			<div class="row flexbox-center">
+				<div class="col-lg-6 text-center text-lg-left">
+					<div class="section-title">
+						<h1><i class="icofont icofont-movie"></i> Now Showing</h1>
+					</div>
+				</div>
+				<div class="col-lg-6 text-center text-lg-right">
+					<!-- <div class="dates">
+									<select name="dates" id="dates">
+										<option value="Monday">Monday</option>
+										<option value="Tuesday">Tuesday</option>
+										<option value="Wednesday">Wednesday</option>
+										<option value="Thursday">Thursday</option>
+										<option value="Friday">Friday</option>
+										<option value="Saturday">Saturday</option>
+										<option value="Sunday">Sunday</option>
+									</select>
+								</div> -->
+					<div class="portfolio-menu">
+						<ul>
+							<li data-filter="*" class="active">Fri</li>
+							<li data-filter=".soon">Sat</li>
+							<li data-filter=".top">Sun</li>
+							<li data-filter=".released">Mon</li>
+							<li data-filter=".released">Tue</li>
+							<li data-filter=".released">Wed</li>
+							<li data-filter=".released">Thur</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<hr />
+			<div class="row portfolio-item--movies">
+				<div class="col-lg-12 col-md-12 col-sm-12 soon released">
+					<div class="single-portfolio single-portfolio--movies">
+						<div class="single-portfolio-img">
+							<img src="assets/img/portfolio/portfolio1.jpg" width="260px" height="434px"
+								alt="portfolio" />
+							<a href="https://www.youtube.com/watch?v=nfKO9rYDmE8" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>The Lost City</h2>
+							<div><small>Action, Comedy</small></div>
+							<P>Reclusive author Loretta Sage writes about exotic places in her popular adventure novels
+								that feature a
+								handsome cover
+								model named Alan. While on tour promoting her new book with Alan, Loretta gets kidnapped
+								by an eccentric
+								billionaire who
+								hopes she can lead him to an ancient city's lost treasure from her latest story.
+								Determined to prove he can be a
+								hero in
+								real life and not just on the pages of her books, Alan sets off to rescue her.</P>
+							<div style='padding-top: 15px;'>
+								<a class="theme-btn movie-times" href="#"><i class="icofont icofont-time"></i> 03:00PM
+								</a>
+								<!-- <a class="theme-btn movie-times" href="#"><i class="icofont icofont-time"></i> 08:40PM </a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 top">
+					<div class="single-portfolio single-portfolio--movies">
+						<div class="single-portfolio-img">
+							<img src="assets/img/portfolio/top_gun.jpg" width="260px" height="434px" alt="portfolio" />
+							<a href="https://www.youtube.com/watch?v=giXco2jaZ_4" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>Top Gun: Maverick</h2>
+							<div><small>Adventure, Thriller</small></div>
+							<P>After more than 30 years of service as one of the Navy's top aviators, Pete "Maverick"
+								Mitchell is where he belongs, pushing the envelope as a courageous test pilot and
+								dodging the advancement in rank that would ground him. Training a detachment of
+								graduates for a special assignment, Maverick must confront the ghosts of his past and
+								his deepest fears, culminating in a mission that demands the ultimate sacrifice from
+								those who choose to fly it.
+							</P>
+							<div style='padding-top: 15px;'>
+								<a class="theme-btn movie-times" href="#"><i class="icofont icofont-time"></i> 03:00PM
+								</a>
+								<a class="theme-btn movie-times" href="#"><i class="icofont icofont-time"></i> 05:00PM
+								</a>
+								<a class="theme-btn movie-times" href="#"><i class="icofont icofont-time"></i> 07:30PM
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="col-lg-12 col-md-12 col-sm-12 soon">
+							<div class="single-portfolio single-portfolio--movies">
+								<div class="single-portfolio-img">
+									<img src="assets/img/portfolio/portfolio3.jpg" width="260px" height="434px" alt="portfolio" />
+									<a href="https://www.youtube.com/watch?v=mqqft2x_Aa4" class="popup-youtube">
+										<i class="icofont icofont-ui-play"></i>
+									</a>
+								</div>
+								<div class="portfolio-content">
+									<h2 class="blockbuster">Batman <span
+											style="font-size: 10px; background: #f88835; color: #fff; border-radius: 20px; padding: 5px;">(Blockbuster)</span>
+									</h2>
+									<div><small>Action, Adventure</small></div>
+									<P>Batman ventures into Gotham City's underworld when a sadistic killer leaves behind a trail of cryptic clues. As the
+									evidence begins to lead closer to home and the scale of the perpetrator's plans become clear, he must forge new
+									relationships, unmask the culprit and bring justice to the abuse of power and corruption that has long plagued the
+									metropolis.</P>
+									<div style='padding-top: 15px;'>
+										<a class="theme-btn movie-times" href="#"><i class="icofont icofont-time"></i> 04:30PM </a>
+										<a class="theme-btn movie-times" href="#"><i class="icofont icofont-time"></i> 08:00PM </a>
+									</div>
+									</div>
+								</div>
+							</div> -->
+				<div class="col-lg-12 col-md-12 col-sm-12 top released">
+					<div class="single-portfolio single-portfolio--movies">
+						<div class="single-portfolio-img">
+							<img src="assets/img/portfolio/portfolio4.jpg" width="260px" height="434px"
+								alt="portfolio" />
+							<a href="https://www.youtube.com/watch?v=oQvTyjNsPD4" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>KING OF THEIVES</h2>
+							<div><small>Drama</small></div>
+							<P>King of thieves is an epic tale of Agesinkole, an all-powerful Bandit and his reign of
+								terror in the prosperous
+								Kingdom
+								of Ajeromi. Concerned by his pillaging, the kingdom moves to destroy him, through the
+								hunters, witches and
+								priests, thus
+								beginning this adventurous saga of revenge, bravery and glory.
+							</P>
+							<div style='padding-top: 15px;'>
+								<a class="theme-btn movie-times" href="#"><i class="icofont icofont-time"></i> 07:35PM
+								</a>
+								<!-- <a class="theme-btn movie-times" href="#"><i class="icofont icofont-time"></i> 08:40PM
+								</a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 released">
+					<div class="single-portfolio single-portfolio--movies">
+						<div class="single-portfolio-img">
+							<img src="assets/img/portfolio/dr_strange.jpeg" width="260px" height="434px"
+								alt="portfolio" />
+							<a href="https://www.youtube.com/watch?v=aWzlQ2N6qqg" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>Dr Strange</h2>
+							<div><small>Action, Adventure</small></div>
+							<P>Dr Stephen Strange casts a forbidden spell that opens a portal to the multiverse.
+								However, a threat emerges that may be too big for his team to handle.</P>
+							<div style='padding-top: 15px;'>
+								<a class="theme-btn movie-times" href="#"><i class="icofont icofont-time"></i> 05:10PM
+								</a>
+								<a class="theme-btn movie-times" href="#"><i class="icofont icofont-time"></i> 07:30PM
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 soon top">
+					<div class="single-portfolio single-portfolio--movies">
+						<div class="single-portfolio-img">
+							<img src="assets/img/portfolio/wildflower.jpg" width="260px" height="434px"
+								alt="portfolio" />
+							<a href="https://www.youtube.com/watch?v=fw6ThCYNGHc" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>Wildflower</h2>
+							<div><small>Drama</small></div>
+							<P>It is a story of three women living in the same compound, experiencing different
+								forms of assault from the men around them. 24-year-old Rolake Dabiri, who is amongst
+								these women decides enough is enough as she speaks up and revolts against these men.
+							</P>
+							<div style='padding-top: 15px;'>
+								<a class="theme-btn movie-times" href="#"><i class="icofont icofont-time"></i> 3:00PM
+								</a>
+								<a class="theme-btn movie-times" href="#"><i class="icofont icofont-time"></i> 5:30PM
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="col-lg-12 col-md-12 col-sm-12 soon">
+					<div class="single-portfolio single-portfolio--movies">
+						<div class="single-portfolio-img">
+							<img src="assets/img/portfolio/portfolio7.jpg" width="260px" height="434px"
+								alt="portfolio" />
+							<a href="https://www.youtube.com/watch?v=4wCH1K-ckZw" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>Uncharted</h2>
+							<div><small>Adventure, Action</small></div>
+							<P>Nathan Drake and his wisecracking partner Victor "Sully" Sullivan embark on a dangerous
+								quest to find
+								the greatest
+								treasure never found while also tracking clues that may lead to Nate's long-lost
+								brother.
+							</P>
+							<div style='padding-top: 15px;'>
+								<a class="theme-btn movie-times" href="#"><i class="icofont icofont-time"></i> 12:00PM
+								</a>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<!-- <div class="col-lg-12 col-md-12 col-sm-12 top released">
+					<div class="single-portfolio single-portfolio--movies">
+						<div class="single-portfolio-img">
+							<img src="assets/img/portfolio/portfolio8.jpg" width="260px" height="434px"
+								alt="portfolio" />
+							<a href="https://www.youtube.com/watch?v=x2YHPZMj8r4" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>The Unbearable Weight of Massive Talent Red</h2>
+							<div><small>Action, Comedy</small></div>
+							<P>Unfulfilled and facing financial ruin, actor Nick Cage accepts a $1 million offer to
+								attend a wealthy fan's
+								birthday
+								party. Things take a wildly unexpected turn when a CIA operative recruits Cage for an
+								unusual mission. Taking on
+								the
+								role of a lifetime, he soon finds himself channeling his most iconic and beloved
+								characters to save himself and
+								his
+								loved ones.
+							</P>
+							<div style='padding-top: 15px;'>
+								<a class="theme-btn movie-times" href="#"><i class="icofont icofont-time"></i> 04:10PM
+								</a>
+								<a class="theme-btn movie-times" href="#"><i class="icofont icofont-time"></i> 08:20PM
+								</a>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<!-- <div class="col-lg-12 col-md-12 col-sm-12 top released">
+					<div class="single-portfolio single-portfolio--movies">
+						<div class="single-portfolio-img">
+							<img src="assets/img/portfolio/portfolio9.jpg" width="260px" height="434px"
+								alt="portfolio" />
+							<a href="https://www.youtube.com/watch?v=zpDuBXB_glk" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>Bad Guys</h2>
+							<div><small>Adventure, Animation, Comedy</small></div>
+							<P>After a lifetime of legendary heists, notorious criminals Mr. Wolf, Mr. Snake, Mr.
+								Piranha, Mr. Shark and Ms.
+								Tarantula
+								are finally caught. To avoid a prison sentence, the animal outlaws must pull off their
+								most challenging con yet
+								--
+								becoming model citizens. Under the tutelage of their mentor, Professor Marmalade, the
+								dubious gang sets out to
+								fool the
+								world that they're turning good.
+							</P>
+							<div style='padding-top: 15px;'>
+								<a class="theme-btn movie-times" href="#"><i class="icofont icofont-time"></i> 02:15PM
+								</a>
+								<a class="theme-btn movie-times" href="#"><i class="icofont icofont-time"></i> 04:35PM
+								</a>
+							</div>
+						</div>
+					</div>
+				</div> -->
+			</div>
+	</section><!-- portfolio section end -->
+	<!-- video section start -->
+	<!-- <section class="video ptb-90">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+					    <div class="section-title pb-20">
+							<h1><i class="icofont icofont-film"></i> Trailers & Videos</h1>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+          <div class="col-md-12">
+						<div class="video-slider mt-20">
+							<div class="video-area">
+								<img src="assets/img/video/video4.png" alt="video" />
+								<a href="https://www.youtube.com/watch?v=x_me3xsvDgk" class="popup-youtube">
+									<i class="icofont icofont-ui-play"></i>
+								</a>
+							</div>
+							<div class="video-area">
+								<img src="assets/img/video/video5.png" alt="video" />
+								<a href="https://www.youtube.com/watch?v=pGi3Bgn7U5U" class="popup-youtube">
+									<i class="icofont icofont-ui-play"></i>
+								</a>
+							</div>
+							<div class="video-area">
+								<img src="assets/img/video/video4.png" alt="video" />
+								<a href="https://www.youtube.com/watch?v=pGi3Bgn7U5U" class="popup-youtube">
+									<i class="icofont icofont-ui-play"></i>
+								</a>
+							</div>
+							<div class="video-area">
+								<img src="assets/img/video/video5.png" alt="video" />
+								<a href="https://www.youtube.com/watch?v=JfVOs4VSpmA" class="popup-youtube">
+									<i class="icofont icofont-ui-play"></i>
+								</a>
+							</div>
+							<div class="video-area">
+								<img src="assets/img/video/video4.png" alt="video" />
+								<a href="https://www.youtube.com/watch?v=RZXnugbhw_4" class="popup-youtube">
+									<i class="icofont icofont-ui-play"></i>
+								</a>
+							</div>
+							<div class="video-area">
+								<img src="assets/img/video/video5.png" alt="video" />
+								<a href="https://www.youtube.com/watch?v=RZXnugbhw_4" class="popup-youtube">
+									<i class="icofont icofont-ui-play"></i>
+								</a>
+							</div>
+							<div class="video-area">
+								<img src="assets/img/video/video4.png" alt="video" />
+								<a href="https://www.youtube.com/watch?v=RZXnugbhw_4" class="popup-youtube">
+									<i class="icofont icofont-ui-play"></i>
+								</a>
+							</div>
+							<div class="video-area">
+								<img src="assets/img/video/video5.png" alt="video" />
+								<a href="https://www.youtube.com/watch?v=RZXnugbhw_4" class="popup-youtube">
+									<i class="icofont icofont-ui-play"></i>
+								</a>
+							</div>
+						</div>
+                    </div>
+				</div>
+			</div> 
+		</section>video section end -->
+	<!-- footer section start -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="widget">
+						<img src="assets/img/logo.png" alt="about" />
+						<p>MEGA-1 CINEMAS 100 Mega-1 Events Way Off Eleganza Bus stop Lekki, Eti-osa Lagos</p>
+						<h6><span>Email: </span>info@megaonecinema.com</h6>
+						<h6><span>Call us: </span>(+234)(0)8065898797</h6>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="widget">
+						<h4>Partners</h4>
+						<ul>
+							<li><a href="https://megaoneevent.com/">Event Center</a></li>
+							<li><a href="https://primemall.com.ng/">Prime Mall</a></li>
+							<!-- <li><a href="#">Security</a></li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="widget">
+						<h4>Quick links</h4>
+						<ul>
+							<li><a href="tickets.html">Pricing</a></li>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="movies.html">Movies</a></li>
+							<!-- <li><a href="celebrities.html">Celebrity gist</a></li> -->
+							<li><a
+									href="https://www.privacypolicygenerator.info/live.php?token=q4RshhcVTdPipOjAmFo0dUkRU3mApcu8">Privacy
+									Policy</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="widget">
+						<h4>Newsletter</h4>
+						<p>Subscribe to our newsletter system now to get latest news from us.</p>
+						<form class="subscription">
+							<input type="text" placeholder="Enter your email.." />
+							<button type="submit" class="btn-text">SUBSCRIBE NOW</button>
+						</form>
+						<div class="login-social" style='padding-top: 10px;'>
+							<a target="_blank" href="https://m.facebook.com/pg/megaonecinemas/posts/"><i
+									class="icofont icofont-social-facebook"></i></a>
+							<a target="_blank" href="https://twitter.com/megaonecinemas?s=09""><i class=" icofont
+								icofont-social-twitter"></i></a>
+							<a target="_blank" href="https://www.instagram.com/megaonecinemas/?igshid=hzxp6nv4co2k"><i
+									class="icofont icofont-social-instagram"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr />
+		</div>
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 text-center text-lg-left">
+						<div class="copyright-content">
+							<p>Copyright © 2022 Megaone Cinemas | All rights reserved</p>
+							<p>Website design by <a target="_blank"
+									href="https://www.trostechnologies.com">Trostechnologies</a></p>
+						</div>
+					</div>
+					<div class="col-lg-6 text-center text-lg-right">
+						<div class="copyright-content">
+							<a href="#" class="scrollToTop">
+								Back to top<i class="icofont icofont-arrow-up"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer><!-- footer section end -->
+	<!-- jquery main JS -->
+	<script src="assets/js/jquery.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<!-- Slick nav JS -->
+	<script src="assets/js/jquery.slicknav.min.js"></script>
+	<!-- owl carousel JS -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<!-- Popup JS -->
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- Isotope JS -->
+	<script src="assets/js/isotope.pkgd.min.js"></script>
+	<!-- Flutterwave -->
+	<script src="https://checkout.flutterwave.com/v3.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+	<!-- main JS -->
+	<script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>
