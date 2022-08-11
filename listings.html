@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/img/favcion.png" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="listings.css">
+    <title>Movie listing</title>
+  </head>
+  <body>
+    <!-- <div id="root"></div> -->
+    <nav>
+      <div><img src="assets/img/logo.png" alt="megaone" width="100px" height="70px" /></div>
+      <div>
+        <button class="btn btn-danger" id="sign-out">Sign out</button>
+        <button class="btn btn-primary" id="sign-up">Add New User</button>
+      </div>
+    </nav>
+    <div class="header-container">
+      <h2>Movie Scheduling and Listing Dashboard</h2>
+    </div>
+
+
+    <div id="banner">
+      <h3>Banners</h3>
+      <div class="result">
+        <table class="table" style="table-layout: fixed; width: 100%">
+          <thead>
+            <tr>
+              <th scope="col">Movie Name</th>
+              <th scope="col">Movie Image URL</th>
+              <th scope="col">Movie Video URL</th>
+              <th scope="col">Movie Duration</th>
+              <th scope="col">Movie Genre</th>
+              <th scope="col">Movie Synopsis</th>
+            </tr>
+          </thead>
+          <tbody id="dataTb"></tbody>
+        </table>
+      </div>
+    </div>
+    <div id="updateContainer">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Fill the form to update Banner</h2>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <form id="editForm">
+            <div class="row">
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Movie Name: </label>
+                  <input type="text" id="movieName" />
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Movie Image: </label>
+                  <input type="text" id="movieImage" />
+                </p>
+              </div>
+
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Movie Video: </label>
+                  <input type="text" id="movieVideo" />
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Movie Duration: </label>
+                  <input type="text" id="movieDuration" />
+                </p>
+              </div>
+              <div class="col-lg-6" id="weightCon">
+                <p class="contact-one__field">
+                  <label>Movie Genre: </label>
+                  <input type="text" id="movieGenre" />
+                </p>
+              </div>
+              <div class="col-lg-6" id="heightCon">
+                <p class="contact-one__field">
+                  <label>Movie Synopsis: </label>
+                  <!-- <input type="number" id="movieSynopsis" /> -->
+                  <textarea id="movieSynopsis">
+
+                  </textarea>
+                </p>
+              </div>
+
+              <div class="col-lg-12">
+                <button type="submit" class="btn btn-primary" id="updBannerBtn">
+                  Update
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <!-- <h3>Modal Footer</h3>  -->
+          <br />
+        </div>
+      </div>
+    </div>
+    <div id="showing">
+      <h3>Showing</h3>
+      <div class="showing_result">
+        <table class="table" style="table-layout: fixed; width: 100%">
+          <thead>
+            <tr>
+              <th scope="col">Movie Name</th>
+              <th scope="col">Movie Image URL</th>
+              <th scope="col">Cast Image URL 1</th>
+              <th scope="col">Cast Image URL 2</th>
+              <th scope="col">Cast Image URL 3</th>
+              <th scope="col">Movie Synopsis</th>
+            </tr>
+          </thead>
+          <tbody id="showingTb"></tbody>
+        </table>
+      </div>
+    </div>
+    <div id="updateShowingContainer">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Fill the form to update Showing</h2>
+          <span class="closeOne">&times;</span>
+        </div>
+        <div class="modal-body">
+          <form id="editForm">
+            <div class="row">
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Movie Name: </label>
+                  <input type="text" id="showingMovieName" />
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Movie Image: </label>
+                  <input type="text" id="showingMovieImage" />
+                </p>
+              </div>
+
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Cast Image URL 1: </label>
+                  <input type="text" id="castImageOne" />
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Cast Image URL 2: </label>
+                  <input type="text" id="castImageTwo" />
+                </p>
+              </div>
+              <div class="col-lg-6" id="weightCon">
+                <p class="contact-one__field">
+                  <label>Cast Image URL 3: </label>
+                  <input type="text" id="castImageThree" />
+                </p>
+              </div>
+              <div class="col-lg-6" id="heightCon">
+                <p class="contact-one__field">
+                  <label>Movie Synopsis: </label>
+                  <!-- <input type="number" id="movieSynopsis" /> -->
+                  <textarea id="showingMovieSynopsis">
+
+                  </textarea>
+                </p>
+              </div>
+
+              <div class="col-lg-12">
+                <button type="submit" class="btn btn-primary" id="updShowingBtn">
+                  Update
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <!-- <h3>Modal Footer</h3>  -->
+          <br />
+        </div>
+      </div>
+    </div>
+    <!-- genre, imgUrl, name, synopsis, timeSlots, vidUrl -->
+    <div id="movies">
+      <h3>Movies</h3>
+      <div class="movies_result">
+        <table class="table" style="table-layout: fixed; width: 100%">
+          <thead>
+            <tr>
+              <th scope="col">Movie Name</th>
+              <th scope="col">Movie Image URL</th>
+              <th scope="col">Movie Video URL</th>
+              <th scope="col">Movie TimeSlot 1</th>
+              <th scope="col">Movie TimeSlot 2</th>
+              <th scope="col">Movie TimeSlot 3</th>
+              <th scope="col">Movie Genre</th>
+              <th scope="col">Movie Synopsis</th>
+            </tr>
+          </thead>
+          <tbody id="movieTb"></tbody>
+        </table>
+      </div>
+      <button type="button" class="btn btn-primary" id="add_movie">Add Movie</button>
+    </div>
+    <div id="updateMovieContainer">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Fill the form to update Movies</h2>
+          <span class="closeTwo">&times;</span>
+        </div>
+        <div class="modal-body">
+          <form id="editForm">
+            <div class="row">
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Movie Name: </label>
+                  <input type="text" id="newMovieName" />
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Movie Image: </label>
+                  <input type="text" id="newMovieImage" />
+                </p>
+              </div>
+
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Movie Video: </label>
+                  <input type="text" id="newMovieVideo" />
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Movie TimeSlot 1: </label>
+                  <input type="text" id="movieTimeSlotOne" />
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Movie TimeSlot 2: </label>
+                  <input type="text" id="movieTimeSlotTwo" />
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Movie TimeSlot 3: </label>
+                  <input type="text" id="movieTimeSlotThree" />
+                </p>
+              </div>
+              <div class="col-lg-6" id="weightCon">
+                <p class="contact-one__field">
+                  <label>Movie Genre: </label>
+                  <input type="text" id="newMovieGenre" />
+                </p>
+              </div>
+              <div class="col-lg-6" id="heightCon">
+                <p class="contact-one__field">
+                  <label>Movie Synopsis: </label>
+                  <!-- <input type="number" id="movieSynopsis" /> -->
+                  <textarea id="newMovieSynopsis">
+
+                  </textarea>
+                </p>
+              </div>
+
+              <div class="col-lg-12">
+                <button type="submit" class="btn btn-primary" id="updMovieBtn">
+                  Update
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <!-- <h3>Modal Footer</h3>  -->
+          <br />
+        </div>
+      </div>
+    </div>
+
+    <div id="addMovieContainer">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Fill the form to new Movie</h2>
+          <span class="closeThree">&times;</span>
+        </div>
+        <div class="modal-body">
+          <form id="editForm">
+            <div class="row">
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Movie Name: </label>
+                  <input type="text" id="new_movie_name" />
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Movie Image: </label>
+                  <input type="text" id="new_movie_image" />
+                </p>
+              </div>
+
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Movie Video: </label>
+                  <input type="text" id="new_movie_video" />
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Movie TimeSlot 1: </label>
+                  <input type="text" id="newMovieTimeSlotOne" />
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Movie TimeSlot 2: </label>
+                  <input type="text" id="newMovieTimeSlotTwo" />
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <p class="contact-one__field">
+                  <label>Movie TimeSlot 3: </label>
+                  <input type="text" id="newMovieTimeSlotThree" />
+                </p>
+              </div>
+              <div class="col-lg-6" id="weightCon">
+                <p class="contact-one__field">
+                  <label>Movie Genre: </label>
+                  <input type="text" id="new_movie_genre" />
+                </p>
+              </div>
+              <div class="col-lg-6" id="heightCon">
+                <p class="contact-one__field">
+                  <label>Movie Synopsis: </label>
+                  <!-- <input type="number" id="movieSynopsis" /> -->
+                  <textarea id="new_movie_synopsis"></textarea>
+                </p>
+              </div>
+
+              <div class="col-lg-12">
+                <button type="submit" class="btn btn-primary" id="add_movieBtn">
+                  Add
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <!-- <h3>Modal Footer</h3>  -->
+          <br />
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="listings.js"></script>
+  </body>
+</html>
